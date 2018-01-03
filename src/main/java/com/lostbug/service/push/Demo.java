@@ -45,6 +45,7 @@ public class Demo {
         unicast.setTitle("中文的title");
         unicast.setText("Android unicast text");
         unicast.goAppAfterOpen();
+        unicast.setAppMasterSecret("vi7cu4jpnom73ocxiirqvtsd1s3dwefh");
         unicast.setDisplayType(AndroidNotification.DisplayType.NOTIFICATION);
         // TODO Set 'production_mode' to 'false' if it's a test device.
         // For how to register a test device, please see the developer doc.
@@ -153,13 +154,14 @@ public class Demo {
         client.send(broadcast);
     }
 
-    public void sendIOSUnicast() throws Exception {
+    public void sendIOSUnicast(String token) throws Exception {
         IOSUnicast unicast = new IOSUnicast(appkey, appMasterSecret);
         // TODO Set your device token
-        unicast.setDeviceToken("xx");
+        unicast.setDeviceToken(token);
         unicast.setAlert("IOS 单播测试");
         unicast.setBadge(0);
         unicast.setSound("default");
+//        unicast.setAppMasterSecret(appMasterSecret);
         // TODO set 'production_mode' to 'true' if your app is under production mode
         unicast.setTestMode();
         // Set customized fields

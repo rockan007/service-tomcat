@@ -29,6 +29,7 @@ public class PushClient {
 	protected static final String postPath = "/api/send";
 
 	public boolean send(UmengNotification msg) throws Exception {
+		System.out.println("友盟消息通知："+msg.toString());
 		String timestamp = Integer.toString((int)(System.currentTimeMillis() / 1000));
 		msg.setPredefinedKeyValue("timestamp", timestamp);
         String url = host + postPath;

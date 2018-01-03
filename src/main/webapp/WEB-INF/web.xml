@@ -17,6 +17,7 @@
     <servlet>
         <servlet-name>PushServlet</servlet-name>
         <servlet-class>com.lostbug.service.push.PushServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>PushServlet</servlet-name>
