@@ -14,4 +14,21 @@
         <url-pattern>/hello</url-pattern>
         <url-pattern>/greeting</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>PushServlet</servlet-name>
+        <servlet-class>com.lostbug.service.push.PushServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PushServlet</servlet-name>
+        <url-pattern>/push</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>settingOne</param-name>
+        <param-value>foo</param-value>
+    </context-param>
+    <context-param>
+        <param-name>settingTwo</param-name>
+        <param-value>bar</param-value>
+    </context-param>
+
 </web-app>
